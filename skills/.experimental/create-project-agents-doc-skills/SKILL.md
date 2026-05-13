@@ -1,6 +1,6 @@
 ---
 name: create-project-agents-doc-skills
-description: 在当前项目创建项目级 agents 文档维护 skills。用于为任意仓库生成 .codex/skills 下的 Codex skills 与 .claude/skills 下的 Claude skills，包括 maintain-agents-docs 和 prune-agents-docs；同时按 AGENTS.md 面向所有 coding agents、CLAUDE.md 仅面向 Claude Code 的分工写入使用提示，不把完整 skill 内容塞进根级文档。
+description: 在当前项目创建或更新项目级 agents 文档维护 skills。用于生成 .codex/skills 与 .claude/skills 下的 maintain-agents-docs 和 prune-agents-docs，并在规则涉及外部事实、官方资料、第三方 API/SDK、平台政策、协议规范、依赖升级或安全要求时要求 web 搜索核对来源；同时按 AGENTS.md 面向所有 coding agents、CLAUDE.md 仅面向 Claude Code 的分工写入使用提示，不把完整 skill 内容塞进根级文档。
 ---
 
 # 创建项目 Agents 文档 Skills
