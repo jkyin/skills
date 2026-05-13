@@ -1,0 +1,4 @@
+interface:
+  display_name: "创建项目 Agents 文档 Skill"
+  short_description: "生成支持 web 搜索的 Codex/Claude 项目级 skills"
+  default_prompt: "使用 $create-project-agents-doc-skills 在当前项目创建支持 web 搜索的 agents 文档维护 skill。"
