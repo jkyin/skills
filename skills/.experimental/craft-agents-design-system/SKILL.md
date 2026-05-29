@@ -1,6 +1,6 @@
 ---
 name: craft-agents-design-system
-description: Craft Agent app 的视觉设计规范参考。在实现、修改或评审 UI 时提供权威的设计 token、配色、字体、间距、阴影、层级与动效约定。当用户说「用 Craft Agent 风格」「参考 Craft Agent 视觉规范」「实现 Craft Agent 同款 X」，或需要正确的颜色/阴影/z-index/动效数值时使用本 skill。覆盖 6 色系统、foreground 混合阶梯、阴影梯度、z-index 标度、Island 动效与组件级 tokens。
+description: Craft Agent app 的视觉设计规范参考。在实现、修改或评审 UI 时提供权威的设计 token、配色、字体、间距、阴影、层级、动效约定与组件规格。当用户说「用 Craft Agent 风格」「参考 Craft Agent 视觉规范」「实现 Craft Agent 同款 X（按钮/下拉/卡片/overlay/Island）」，或需要正确的颜色/阴影/z-index/动效数值、组件 anatomy·variants·states·props 时使用本 skill。覆盖 6 色系统、foreground 混合阶梯、阴影梯度、z-index 标度、Island 动效、组件级 tokens，以及聊天/overlay/菜单/内容渲染等组件的完整规格。
 ---
 
 # Craft Agent 视觉设计规范
@@ -17,11 +17,13 @@ description: Craft Agent app 的视觉设计规范参考。在实现、修改或
 
 ## 如何使用
 
-1. 先读 [reference.md](reference.md) —— 完整规范（11 节，含全部 token 表）。
-2. 按需取值：实现时引用 CSS 变量名（如 `var(--foreground-50)`），不要硬编码原始数值。
-3. 遵守两条铁律：
+1. 需要**设计基元**（颜色/字体/间距/阴影/z-index/动效）→ 读 [reference.md](reference.md)（11 节，含全部 token 表）。
+2. 需要**组件规格**（某个按钮/下拉/卡片/overlay/Island 怎么做）→ 读 [components.md](components.md)（含 anatomy / variants / states / props / 尺寸 / 用到的 token，及跨组件「通用约定」）。
+3. 按需取值：实现时引用 CSS 变量名（如 `var(--foreground-50)`）与组件实测类名/数值，不要硬编码原始色值。
+4. 遵守铁律：
    - **只重定义 6 基色**即可重主题，其余全部派生，勿手改派生 token。
    - **绝不硬编码 z-index 与颜色**，一律引用标度 token。
+   - 新建组件先看 components.md 的 **§5 组件通用约定**，复用既有模式（浮动控件三件套、复制交互、菜单项规范、focus 环等）。
 
 ## 核心速查
 
