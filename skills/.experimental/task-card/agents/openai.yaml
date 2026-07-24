@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务卡"
+  short_description: "将越界发现整理为证据充分、可复核、可独立执行的工程任务卡"
+  default_prompt: "使用 $task-card 把当前确认但不在本次改动中处理的问题整理成可独立执行的任务卡。"
