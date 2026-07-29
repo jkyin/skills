@@ -1,0 +1,6 @@
+interface:
+  display_name: "功能规格交付流程"
+  short_description: "将模糊的新需求整理为可执行规格，并完成实施、验证、审查与复盘"
+  default_prompt: "使用 $feature-spec 把这个新需求整理成规格，并按阶段完成交付。"
+policy:
+  allow_implicit_invocation: false
