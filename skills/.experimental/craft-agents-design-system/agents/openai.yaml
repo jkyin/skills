@@ -1,4 +1,0 @@
-interface:
-  display_name: "Craft Agent 视觉设计规范"
-  short_description: "Craft Agent app 的设计 token、配色、阴影、z-index 与动效参考"
-  default_prompt: "使用 $craft-agents-design-system 按 Craft Agent 视觉规范实现/评审 UI。"

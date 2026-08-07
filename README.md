@@ -14,7 +14,6 @@ skills/
 当前包含：
 
 - `skills/.experimental/create-project-agents-doc-skills`
-- `skills/.experimental/craft-agents-design-system`
 - `skills/.experimental/feature-spec`
 - `skills/.experimental/task-card`
 
