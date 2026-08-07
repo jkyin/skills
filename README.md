@@ -21,19 +21,15 @@ skills/
 
 推荐使用 Codex 内置的 `$skill-installer`。
 
-从 GitHub 目录 URL 安装：
+按 GitHub 目录 URL 安装需要的 skill：
 
 ```text
-$skill-installer install https://github.com/<owner>/<repo>/tree/main/skills/.experimental/create-project-agents-doc-skills
+$skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/create-project-agents-doc-skills
+$skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/feature-spec
+$skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/task-card
 ```
 
-如果本仓库以后有 `.curated` skills，可以按名称安装：
-
-```text
-$skill-installer create-project-agents-doc-skills
-```
-
-安装后重启 Codex，让新 skill 生效。
+安装完成后，skill 会在下一轮对话中可用；若未出现，再重启 Codex。
 
 ## 维护规则
 
