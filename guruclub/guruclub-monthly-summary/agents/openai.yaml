@@ -1,0 +1,7 @@
+interface:
+  display_name: "月度任务汇总（默认 GuruClub）"
+  short_description: "明确调用后先弹框确认来源，默认 GuruClub，可汇总多个项目的月度任务"
+  default_prompt: "使用 $guruclub-monthly-summary，先弹框确认汇总范围（默认 GuruClub）和补充要求，再整理月度任务。"
+
+policy:
+  allow_implicit_invocation: false

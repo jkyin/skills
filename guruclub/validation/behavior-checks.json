@@ -1,0 +1,9 @@
+{
+  "passed": [
+    "Mid-install failure restores original entries",
+    "Feature upstream hides changes; develop base retains them; merge-base endpoint diff is equivalent",
+    "Business computation, explicit invocation metadata and source variants unchanged",
+    "Current Markdown local reference targets exist"
+  ],
+  "scope": "offline fixtures and static integrity checks"
+}

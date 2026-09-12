@@ -1,0 +1,123 @@
+{
+  "home": "/Users/jkyin",
+  "repository": "/Users/jkyin/Workspace/Personal/skills/guruclub",
+  "entries": [
+    {
+      "path": "/Users/jkyin/.codex/skills/guruclub-weekly-report",
+      "relative": ".codex/skills/guruclub-weekly-report",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guruclub-weekly-report",
+      "before": {
+        "type": "directory",
+        "sha256": "80ea6db091203c31efb2374f13e0dacee1a2d399bc626a1881662ac6d81b1b94",
+        "entries": 5
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.codex/skills/guruclub-monthly-summary",
+      "relative": ".codex/skills/guruclub-monthly-summary",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guruclub-monthly-summary",
+      "before": {
+        "type": "directory",
+        "sha256": "1ce13398c49ac6d0092f852ef0936ba299e43e6b560716f1aaedc6330836b42f",
+        "entries": 8
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.codex/skills/guru-mr-description",
+      "relative": ".codex/skills/guru-mr-description",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guru-mr-description",
+      "before": {
+        "type": "directory",
+        "sha256": "4b50d594e3f8790c173ea985339ed173f0ac01ddfb9ac06f0967dbc32faefa1d",
+        "entries": 1
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.agents/skills/commit-expert",
+      "relative": ".agents/skills/commit-expert",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/commit-expert",
+      "before": {
+        "type": "directory",
+        "sha256": "a9754f78a39a5a4fbf34ce7541e61edc53e01fc82dab9eec2ae4c1af69b56caf",
+        "entries": 4
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.agents/skills/guru-code-review",
+      "relative": ".agents/skills/guru-code-review",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guru-code-review",
+      "before": {
+        "type": "directory",
+        "sha256": "b663af83b840f3d89581235427d8050d1ae7f9308b02859ce643dd2b4e619b5a",
+        "entries": 6
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.agents/skills/guru-mr-description",
+      "relative": ".agents/skills/guru-mr-description",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guru-mr-description",
+      "before": {
+        "type": "symlink",
+        "target": "/Users/jkyin/.claude/skills/guru-mr-description"
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.claude/skills/commit-expert",
+      "relative": ".claude/skills/commit-expert",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/commit-expert",
+      "before": {
+        "type": "symlink",
+        "target": "../../.agents/skills/commit-expert"
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.claude/skills/guru-code-review",
+      "relative": ".claude/skills/guru-code-review",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guru-code-review",
+      "before": {
+        "type": "directory",
+        "sha256": "ed9405fa8e079cfe8f88d9736bd48e10a531b65e90f45eea03f7704e4197ec29",
+        "entries": 6
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.claude/skills/guru-mr-description",
+      "relative": ".claude/skills/guru-mr-description",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guru-mr-description",
+      "before": {
+        "type": "directory",
+        "sha256": "4b50d594e3f8790c173ea985339ed173f0ac01ddfb9ac06f0967dbc32faefa1d",
+        "entries": 1
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.claude/skills/guruclub-weekly-report",
+      "relative": ".claude/skills/guruclub-weekly-report",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guruclub-weekly-report",
+      "before": {
+        "type": "symlink",
+        "target": "/Users/jkyin/.codex/skills/guruclub-weekly-report"
+      },
+      "action": "backup-and-link"
+    },
+    {
+      "path": "/Users/jkyin/.claude/skills/guruclub-monthly-summary",
+      "relative": ".claude/skills/guruclub-monthly-summary",
+      "target": "/Users/jkyin/Workspace/Personal/skills/guruclub/guruclub-monthly-summary",
+      "before": {
+        "type": "symlink",
+        "target": "/Users/jkyin/.codex/skills/guruclub-monthly-summary"
+      },
+      "action": "backup-and-link"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "周报汇总（默认 GuruClub）"
+  short_description: "明确调用后先弹框确认范围，默认 GuruClub，可补充或替换任意汇总来源"
+  default_prompt: "使用 $guruclub-weekly-report，先弹框让我确认或补充汇总来源、统计时间与要求，再生成周报预览。"
+
+policy:
+  allow_implicit_invocation: false

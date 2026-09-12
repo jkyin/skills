@@ -1,0 +1,10 @@
+{
+  "passed": [
+    "11 entries linked; symlink and directory originals backed up",
+    "Repeated apply is idempotent",
+    "Restore reproduces every original directory and symlink",
+    "Changed installation rejects stale preview without mutation",
+    "Missing entries are skipped, not created"
+  ],
+  "scope": "isolated temporary home; no production installation"
+}

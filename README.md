@@ -13,6 +13,7 @@ skills/
 
 当前包含：
 
+- `guruclub/`：GuruClub 周报、月报、Code Review、MR 描述和提交规范；[来源与版本说明](guruclub/README.md)
 - `skills/.experimental/create-project-agents-doc-skills`
 - `skills/.experimental/feature-spec`
 - `skills/.experimental/task-card`
@@ -37,4 +38,5 @@ $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.exper
 - UI metadata 放在 `agents/openai.yaml`。
 - 不为单个 skill 添加 README、安装说明或 changelog；必要说明写进 `SKILL.md`。
 - 实验中的 skill 放 `skills/.experimental/`。
+- GuruClub 业务 skills 按领域集中放在 `guruclub/<skill-name>/`。
 - 稳定后再移动到 `skills/.curated/`。

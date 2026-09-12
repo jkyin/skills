@@ -1,0 +1,32 @@
+[
+  {
+    "skill": "guru-commit",
+    "exit_code": 0,
+    "result": "Skill is valid!",
+    "entry_lines": 46
+  },
+  {
+    "skill": "guru-code-review",
+    "exit_code": 0,
+    "result": "Skill is valid!",
+    "entry_lines": 49
+  },
+  {
+    "skill": "guru-mr-description",
+    "exit_code": 0,
+    "result": "Skill is valid!",
+    "entry_lines": 29
+  },
+  {
+    "skill": "guruclub-monthly-summary",
+    "exit_code": 0,
+    "result": "Skill is valid!",
+    "entry_lines": 40
+  },
+  {
+    "skill": "guruclub-weekly-report",
+    "exit_code": 0,
+    "result": "Skill is valid!",
+    "entry_lines": 24
+  }
+]

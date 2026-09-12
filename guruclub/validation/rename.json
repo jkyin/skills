@@ -1,0 +1,10 @@
+{
+  "from": "commit-expert",
+  "to": "guru-commit",
+  "renamed_installations": [
+    "~/.agents/skills/guru-commit",
+    "~/.claude/skills/guru-commit"
+  ],
+  "all_11_installations_verified": true,
+  "old_backup_restore_test": "PASS"
+}
