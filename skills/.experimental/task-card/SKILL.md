@@ -75,7 +75,7 @@ description: 把工作中顺带发现、但超出本次改动范围（out of sco
 ### 创建并保存
 
 1. 取得任务实际所属项目的绝对路径；不要使用临时 worktree 路径。
-2. 去掉绝对路径开头的 `/`，把剩余 `/` 替换为 `-`，得到项目目录名。例如 `/Users/jkyin/Workspace/Company/Gelonghui/guruclub` 对应 `Users-jkyin-Workspace-Company-Gelonghui-guruclub`。
+2. 去掉绝对路径开头的 `/`，把剩余 `/` 替换为 `-`，得到项目目录名。例如 `/workspace/team/project` 对应 `workspace-team-project`。
 3. 将完整任务卡保存为 `~/.task-cards/<项目目录名>/<YYYYMMDD-HHmmss>-<简短标题>.md`。正文使用上面的六段骨架，不添加状态机或长期跟踪字段。
 4. 若运行环境提供 Memory，同时保存最小索引：任务标题、项目绝对路径、任务卡绝对路径。不要把完整正文复制进 Memory。
 5. 回报任务卡绝对路径。文件或 Memory 写入失败时如实说明；不要声称已经保存，也不要退回临时目录。

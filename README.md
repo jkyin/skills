@@ -5,18 +5,32 @@
 ## 目录结构
 
 ```text
-skills/
-  .curated/        # 相对稳定、可按名称安装的 skills
-  .experimental/   # 实验中或个人使用的 skills
-  .system/         # 系统级 skills；本仓库通常不放这里
+.
+├── README.md
+├── contributing.md
+└── skills/
+    ├── guruclub/
+    │   ├── guru-code-review/
+    │   ├── guru-commit/
+    │   ├── guru-mr-description/
+    │   ├── guruclub-monthly-summary/
+    │   └── guruclub-weekly-report/
+    └── .experimental/
+        ├── create-project-agents-doc-skills/
+        ├── feature-spec/
+        ├── task-card/
+        └── gitlab-ai-review-triage/  # 待发布
 ```
 
-当前包含：
+`.curated/` 与 `.system/` 当前不存在，不需要为空目录占位。
 
-- `guruclub/`：GuruClub 周报、月报、Code Review、MR 描述和提交规范；[来源与版本说明](guruclub/README.md)
+当前技能：
+
+- `skills/guruclub/`：GuruClub 周报、月报、Code Review、MR 描述和提交规范。
 - `skills/.experimental/create-project-agents-doc-skills`
 - `skills/.experimental/feature-spec`
 - `skills/.experimental/task-card`
+- `skills/.experimental/gitlab-ai-review-triage`：逐条裁决私有 GitLab MR 的 AI Review 评论，按证据收敛本 MR 必修项；尚未发布，不属于远程安装入口。
 
 ## 安装
 
@@ -30,13 +44,17 @@ $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.exper
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/task-card
 ```
 
+待发布的 skill 在对应目录提交并推送前，不列为远程安装入口。
+
 安装完成后，skill 会在下一轮对话中可用；若未出现，再重启 Codex。
 
 ## 维护规则
 
 - 每个 skill 是一个独立目录，必须包含 `SKILL.md`。
-- UI metadata 放在 `agents/openai.yaml`。
+- 需要 UI metadata 或 Codex 调用策略时放在 `agents/openai.yaml`，不要求每个 skill 都有该文件。
 - 不为单个 skill 添加 README、安装说明或 changelog；必要说明写进 `SKILL.md`。
 - 实验中的 skill 放 `skills/.experimental/`。
-- GuruClub 业务 skills 按领域集中放在 `guruclub/<skill-name>/`。
-- 稳定后再移动到 `skills/.curated/`。
+- GuruClub 业务 skills 按领域集中放在 `skills/guruclub/<skill-name>/`。
+- 通用实验 skill 稳定后可移动到 `skills/.curated/`；GuruClub 业务 skill 保留领域目录。
+- Python 缓存属于本地产物，由 `.gitignore` 排除，不纳入 skill 分发内容。
+- 修改后检查本地引用并运行适用的 skill 校验；保留跨客户端字段时分别说明校验器的兼容性限制。
