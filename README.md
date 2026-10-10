@@ -19,7 +19,7 @@
         ├── create-project-agents-doc-skills/
         ├── feature-spec/
         ├── task-card/
-        └── gitlab-ai-review-triage/  # 待发布
+        └── gitlab-ai-review-triage/
 ```
 
 `.curated/` 与 `.system/` 当前不存在，不需要为空目录占位。
@@ -30,7 +30,7 @@
 - `skills/.experimental/create-project-agents-doc-skills`
 - `skills/.experimental/feature-spec`
 - `skills/.experimental/task-card`
-- `skills/.experimental/gitlab-ai-review-triage`：逐条裁决私有 GitLab MR 的 AI Review 评论，按证据收敛本 MR 必修项；尚未发布，不属于远程安装入口。
+- `skills/.experimental/gitlab-ai-review-triage`：逐条裁决私有 GitLab MR 的 AI Review 评论，按证据收敛本 MR 必修项。
 
 ## 安装
 
@@ -42,9 +42,10 @@
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/create-project-agents-doc-skills
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/feature-spec
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/task-card
+$skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/gitlab-ai-review-triage
 ```
 
-待发布的 skill 在对应目录提交并推送前，不列为远程安装入口。
+安装 URL 须对应远端已推送的目录；仅有本地提交时，新 skill 的远程安装入口仍不可用。
 
 安装完成后，skill 会在下一轮对话中可用；若未出现，再重启 Codex。
 
