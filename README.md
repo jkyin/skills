@@ -10,7 +10,7 @@
 ├── contributing.md
 └── skills/
     ├── guruclub/
-    │   ├── guru-ai-review-triage/
+    │   ├── guru-review-triage/
     │   ├── guru-code-review/
     │   ├── guru-commit/
     │   ├── guru-mr-description/
@@ -30,7 +30,7 @@
 - `skills/.experimental/create-project-agents-doc-skills`
 - `skills/.experimental/feature-spec`
 - `skills/.experimental/task-card`
-- `skills/guruclub/guru-ai-review-triage`：逐条裁决私有 GitLab MR 的 AI Review 评论，按证据收敛本 MR 必修项。
+- `skills/guruclub/guru-review-triage`：逐条裁决私有 GitLab MR 的已有评审评论（AI 或人工），按证据收敛本 MR 必修项。
 
 ## 安装
 
@@ -42,7 +42,7 @@
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/create-project-agents-doc-skills
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/feature-spec
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/task-card
-$skill-installer install https://github.com/jkyin/skills/tree/main/skills/guruclub/guru-ai-review-triage
+$skill-installer install https://github.com/jkyin/skills/tree/main/skills/guruclub/guru-review-triage
 ```
 
 安装 URL 须对应远端已推送的目录；仅有本地提交时，新 skill 的远程安装入口仍不可用。
