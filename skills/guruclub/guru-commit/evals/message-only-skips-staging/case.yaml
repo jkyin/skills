@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: message-only-skips-staging
+expected_outcome: |
+  只读取 diff 后给出一条 `fix: <中文描述>` 格式的 message，描述播放结束后封面恢复显示；
+  不暂存、不运行格式化、不提交或推送，工作区保持原样。
+context:
+  scaffold_script: setup-repo.sh

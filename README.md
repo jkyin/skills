@@ -58,4 +58,5 @@ $skill-installer install https://github.com/jkyin/skills/tree/main/skills/gurucl
 - GuruClub 业务 skills 按领域集中放在 `skills/guruclub/<skill-name>/`。
 - 通用实验 skill 稳定后可移动到 `skills/.curated/`；GuruClub 业务 skill 保留领域目录。
 - Python 缓存属于本地产物，由 `.gitignore` 排除，不纳入 skill 分发内容。
+- 评测用例放在 skill 的 `evals/<case>/`（skill-creator 与 `claude plugin eval` 共用的布局）；运行产物 `evals/results/` 由 `.gitignore` 排除。
 - 修改后检查本地引用并运行适用的 skill 校验；保留跨客户端字段时分别说明校验器的兼容性限制。

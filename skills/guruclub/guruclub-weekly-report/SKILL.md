@@ -1,5 +1,6 @@
 ---
 name: guruclub-weekly-report
+disable-model-invocation: true
 description: "明确调用时汇总本人每周实质性工作，先确认范围，输出中文表格；可按请求填写 Confluence 或仅提醒。"
 ---
 
@@ -9,7 +10,7 @@ description: "明确调用时汇总本人每周实质性工作，先确认范围
 
 ## 调用与范围
 
-- 保留 `agents/openai.yaml` 的 `policy.allow_implicit_invocation: false`。只响应明确点名、技能选择器或计划任务显式调用；讨论或修改本 skill 不执行周报。
+- 保留 `agents/openai.yaml` 的 `policy.allow_implicit_invocation: false`（Codex）与 frontmatter 的 `disable-model-invocation: true`（Claude Code）。只响应明确点名、技能选择器或计划任务显式调用；讨论或修改本 skill 不执行周报。
 - 同一次调用的范围回答、修订和写入确认延续生效；新周报重新确认范围，不继承旧项目清单、例外或页面授权。
 - 明确“仅提醒”时读取 [提醒模式](references/reminder.md)，提醒后结束。其余调用进入汇总模式。
 - 汇总的第一项业务动作是按 [范围确认](references/scope.md) 展示来源、具体起止时间和要求，即使已给完整参数也保留本轮首次确认。范围尚未确认时不采集业务资料，空回答不算确认。
