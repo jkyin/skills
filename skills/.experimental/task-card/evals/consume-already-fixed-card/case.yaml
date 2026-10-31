@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: consume-already-fixed-card
+expected_outcome: |
+  完整读取任务卡，按判定分支核实 legacyBadgeSync 已不存在，不改代码，只回报结论与证据；
+  该分支视为达成完成判定，删除任务卡文件并回报。
+context:
+  scaffold_script: setup-repo.sh

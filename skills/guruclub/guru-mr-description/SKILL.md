@@ -1,6 +1,6 @@
 ---
 name: guru-mr-description
-description: 为 GuruClub 及相关 GitLab 项目撰写或更新 MR 标题与描述，按最终 diff 说明问题、结果和验证。
+description: 为 GuruClub 及相关 GitLab 项目撰写或更新 MR 标题与描述：用户要求写 MR 描述、起草或修改 MR 标题与正文时使用。按最终 diff 说明问题、结果和验证。
 ---
 
 # GuruClub MR 描述

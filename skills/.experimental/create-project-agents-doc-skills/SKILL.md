@@ -1,6 +1,6 @@
 ---
 name: create-project-agents-doc-skills
-description: 在当前项目创建或更新项目级 agents 文档维护 skills。用于生成 .codex/skills 与 .claude/skills 下的 maintain-agents-docs 和 prune-agents-docs，并在规则涉及外部事实、官方资料、第三方 API/SDK、平台政策、协议规范、依赖升级或安全要求时要求 web 搜索核对来源；同时按 AGENTS.md 面向所有 coding agents、CLAUDE.md 仅面向 Claude Code 的分工写入使用提示，不把完整 skill 内容塞进根级文档。
+description: 在当前项目创建或更新项目级 agents 文档维护 skills。用于生成 .agents/skills 与 .claude/skills 下的 maintain-agents-docs 和 prune-agents-docs，并在规则涉及外部事实、官方资料、第三方 API/SDK、平台政策、协议规范、依赖升级或安全要求时要求 web 搜索核对来源；同时按 AGENTS.md 面向所有 coding agents、CLAUDE.md 仅面向 Claude Code 的分工写入使用提示，不把完整 skill 内容塞进根级文档。
 ---
 
 # 创建项目 Agents 文档 Skills
@@ -11,10 +11,10 @@ description: 在当前项目创建或更新项目级 agents 文档维护 skills�
 
 默认创建 Codex 侧项目级 skill：
 
-- `.codex/skills/maintain-agents-docs/SKILL.md`
-- `.codex/skills/maintain-agents-docs/agents/openai.yaml`
-- `.codex/skills/prune-agents-docs/SKILL.md`
-- `.codex/skills/prune-agents-docs/agents/openai.yaml`
+- `.agents/skills/maintain-agents-docs/SKILL.md`
+- `.agents/skills/maintain-agents-docs/agents/openai.yaml`
+- `.agents/skills/prune-agents-docs/SKILL.md`
+- `.agents/skills/prune-agents-docs/agents/openai.yaml`
 
 如果项目存在 `.claude/skills`、`CLAUDE.md`，或用户明确要求 Claude 也可用，创建 Claude 侧项目级 skill：
 
@@ -23,13 +23,13 @@ description: 在当前项目创建或更新项目级 agents 文档维护 skills�
 - `.claude/skills/prune-agents-docs/SKILL.md`
 - `.claude/skills/prune-agents-docs/agents/openai.yaml`
 
-`name` 必须保持英文标识符：`maintain-agents-docs` 和 `prune-agents-docs`。正文优先使用目标项目的主要语言；若不确定，使用中文并保留命令、文件名、API 名和类型名原文。不要把 skill 放在 `.agents/`。
+`name` 必须保持英文标识符：`maintain-agents-docs` 和 `prune-agents-docs`。正文优先使用目标项目的主要语言；若不确定，使用中文并保留命令、文件名、API 名和类型名原文。
 
 ## 项目勘察
 
 创建前先收集目标项目上下文：
 
-- 查找指令文件：`AGENTS.md`、`CLAUDE.md`、`.github/copilot-instructions.md`、`.cursorrules`、现有 `.codex/skills`、`.claude/skills`。
+- 查找指令文件：`AGENTS.md`、`CLAUDE.md`、`.github/copilot-instructions.md`、`.cursorrules`、现有 `.agents/skills`、`.claude/skills`。
 - 检查项目结构：`rg --files` 或等价方式，定位 docs、src、tests、scripts。
 - 检查 git 状态：`git status --short`，避免覆盖用户已有改动。
 - 读取现有根级指令文件全文。
@@ -84,7 +84,7 @@ description: 在当前项目创建或更新项目级 agents 文档维护 skills�
 - 生命周期顺序：`update -> merge -> move -> add`。
 - 证据来源：用户请求、现有指令、当前 diff、staged diff、未 push commits、最近 6 个 commits、相关源码/docs、web 搜索核对过的官方资料。
 - 提升门槛：只有 durable rule 才能进入 agents docs。
-- 放置门槛：`AGENTS.md` 放所有 coding agents 公共规则和 skill 使用时机；`CLAUDE.md` 只放 Claude Code 专属约束和 Claude 侧 skill 使用提示；完整 skill 内容放 `.codex/skills` 或 `.claude/skills`。
+- 放置门槛：`AGENTS.md` 放所有 coding agents 公共规则和 skill 使用时机；`CLAUDE.md` 只放 Claude Code 专属约束和 Claude 侧 skill 使用提示；完整 skill 内容放 `.agents/skills` 或 `.claude/skills`。
 - 边界：不大规模删除、不重写整个文件、不添加 commit log、不单次新增超过 5 条规则。
 - 审查摘要：最终回复必须说明证据来源、web 搜索来源 URL 或未联网缺口、动作数量、保留候选项和是否触碰 protected semantics。
 - protected semantics：使用从目标项目提炼出的内容。
@@ -105,13 +105,13 @@ description: 在当前项目创建或更新项目级 agents 文档维护 skills�
 ## 写入规则
 
 - 若目标 skill 已存在，先读取现有内容并更新，不要盲目覆盖。
-- Codex skill 放 `.codex/skills/`；Claude skill 放 `.claude/skills/`；不要使用 `.agents/`。
-- `.codex` 和 `.claude` 的 skill 可以共享生命周期机制，但描述中要尊重各工具入口差异。
+- Codex skill 放 `.agents/skills/`；Claude skill 放 `.claude/skills/`。
+- `.agents` 和 `.claude` 的 skill 可以共享生命周期机制，但描述中要尊重各工具入口差异。
 - `agents/openai.yaml` 使用目标项目语言；`default_prompt` 必须包含 `$maintain-agents-docs` 或 `$prune-agents-docs`。
 - 不创建 README、安装说明、changelog 或额外辅助文档。
 - 不把完整 skill 内容写入 `AGENTS.md` 或 `CLAUDE.md`；根级文档只写什么时候使用哪个 skill。
 - `CLAUDE.md` 只写 Claude Code 专属约束，不重复 `AGENTS.md` 的公共规则。
-- 如果项目 `.gitignore` 忽略 `.codex/` 或 `.claude/`，最终回复必须提醒用户。
+- 如果项目 `.gitignore` 忽略 `.agents/` 或 `.claude/`，最终回复必须提醒用户。
 
 ## 验证
 
@@ -119,7 +119,7 @@ description: 在当前项目创建或更新项目级 agents 文档维护 skills�
 
 - 校验每个 `SKILL.md` frontmatter 只有合法字段，`name` 为 hyphen-case，`description` 不超过 1024 字符。
 - 检查没有模板 `TODO` 残留。
-- 对比 `.codex` 和 `.claude` 对应 skill，确认应该一致的内容确实一致。
+- 对比 `.agents` 和 `.claude` 对应 skill，确认应该一致的内容确实一致。
 - 检查 `agents/openai.yaml` 的 `display_name`、`short_description` 和 `default_prompt` 存在且与 skill 职责一致。
 - 检查生成的 maintain/prune skills 明确包含 web 搜索规则，并要求最终回复报告搜索来源 URL 或未联网缺口。
 - 最终回复说明创建了哪些文件、项目专属 protected semantics 来自哪里、是否更新了根级 skill 使用提示、哪些目录被 git ignore、web 搜索是否完成及来源。

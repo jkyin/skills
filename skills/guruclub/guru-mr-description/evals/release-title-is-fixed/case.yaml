@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: release-title-is-fixed
+expected_outcome: |
+  标题固定为 `release: 10.18.0`；正文只依据该分支相对 develop 的实际提交，不编造功能或验证结果。
+context:
+  scaffold_script: setup-repo.sh

@@ -1,0 +1,9 @@
+# 注意：真实运行会把任务卡写进本机 ~/.task-cards/，评测后需手动清理。
+schema_version: "1.1"
+name: opens-card-for-confirmed-dead-code
+expected_outcome: |
+  在 ~/.task-cards/<项目目录名>/ 下保存一张六段任务卡并回报绝对路径；
+  证据含 legacyBadgeSync 的完整 grep 命中与行号，分已确认与未验证；
+  任务段带“问题是否仍存在”的判定分支和可观察的完成判定。
+context:
+  scaffold_script: setup-repo.sh

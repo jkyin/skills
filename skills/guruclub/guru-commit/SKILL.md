@@ -1,6 +1,6 @@
 ---
 name: guru-commit
-description: 为 GuruClub 及其 iOS 库准备或执行已授权的 Git 提交，检查依赖引用并生成中文提交信息。
+description: 为 GuruClub 及其 iOS 库准备或执行已授权的 Git 提交：在这些仓库中用户要求提交改动、生成 commit message 或拆分提交时使用。检查 local_pod 依赖引用与 Swift 格式化，生成中文提交信息；只查看 Git 状态或解释 Git 命令时不使用。
 ---
 
 # GuruClub Git 提交规范

@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: declines-unverified-suspicion
+expected_outcome: |
+  没有可复核证据与可执行第一步时不保存任务卡：先调查给出具体结论，或说明需要什么证据，
+  不把模糊猜测直接写成卡。
+context:
+  scaffold_script: setup-repo.sh

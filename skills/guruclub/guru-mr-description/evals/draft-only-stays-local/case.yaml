@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: draft-only-stays-local
+expected_outcome: |
+  基于当前分支相对 develop 的最终 diff 交付 Markdown 标题与正文，说明问题、结果和验证；
+  验证只写有证据的结果，未执行的检查列为待验证；不写入 GitLab、不提交或推送。
+context:
+  scaffold_script: setup-repo.sh

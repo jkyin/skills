@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: simple-fix-stays-brief
+expected_outcome: |
+  单行文案修正只用一两句说明问题与结果，再列实际验证；不套用全部章节，不更新远端。
+context:
+  scaffold_script: setup-repo.sh
