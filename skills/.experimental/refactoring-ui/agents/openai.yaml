@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refactoring UI"
+  short_description: "按 Refactoring UI 的层次、间距、文字、颜色、深度原则设计或审查界面"
+  default_prompt: "使用 $refactoring-ui 审查这个界面，按影响排序给出具体改法。"
