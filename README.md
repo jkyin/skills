@@ -19,6 +19,7 @@
     └── .experimental/
         ├── create-project-agents-doc-skills/
         ├── feature-spec/
+        ├── refactoring-ui/
         └── task-card/
 ```
 
@@ -29,6 +30,7 @@
 - `skills/guruclub/`：GuruClub 周报、月报、Code Review、AI Review 裁决、MR 描述和提交规范。
 - `skills/.experimental/create-project-agents-doc-skills`
 - `skills/.experimental/feature-spec`
+- `skills/.experimental/refactoring-ui`：按 Refactoring UI 的层次、间距、文字、颜色、深度原则设计或审查界面，附默认刻度与审查清单。
 - `skills/.experimental/task-card`
 - `skills/guruclub/guru-review-triage`：逐条裁决私有 GitLab MR 的已有评审评论（AI 或人工），按证据收敛本 MR 必修项。
 
@@ -41,6 +43,7 @@
 ```text
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/create-project-agents-doc-skills
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/feature-spec
+$skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/refactoring-ui
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/.experimental/task-card
 $skill-installer install https://github.com/jkyin/skills/tree/main/skills/guruclub/guru-review-triage
 ```
